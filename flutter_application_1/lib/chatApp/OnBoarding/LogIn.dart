@@ -23,7 +23,7 @@ class _LogInPageState extends State<LogInPage> {
     _initializePrefs();
   }
   void _NavigateToSignUp(){
-    Navigator.push(context, MaterialPageRoute(builder: (context ) => SignupPage()));
+    Navigator.push(context, MaterialPageRoute(builder: (context ) => const SignupPage()));
   }
 
   void _initializePrefs() async {
@@ -164,7 +164,7 @@ class _LogInPageState extends State<LogInPage> {
           padding: const EdgeInsets.symmetric(vertical: 8),
         ),
 
-        child: SizedBox(
+        child: const SizedBox(
           width: double.infinity,
           child: Text("Sign In",
             textAlign: TextAlign.center,
@@ -182,7 +182,7 @@ class _LogInPageState extends State<LogInPage> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text("Don't have an account?",
+        const Text("Don't have an account?",
           style: TextStyle(
             // fontFamily: 'AIR',
             fontWeight: FontWeight.w600,
@@ -191,7 +191,7 @@ class _LogInPageState extends State<LogInPage> {
         ),
         TextButton(onPressed: _NavigateToSignUp,
 
-            child:  Text("Sign Up",
+            child:  const Text("Sign Up",
     style: TextStyle(
     // fontFamily: 'AIR',
     fontWeight: FontWeight.w800,

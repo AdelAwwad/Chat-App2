@@ -47,7 +47,7 @@ class _SignupPageState extends State<SignupPage> {
     return Container(
         decoration: const BoxDecoration(color: Color(0xFFFFF8E1)),
         child: Scaffold(
-          backgroundColor: Colors.transparent,
+
           floatingActionButtonLocation: FloatingActionButtonLocation.startTop,
           floatingActionButton: Padding(
             padding: const EdgeInsets.only(top: 30),
