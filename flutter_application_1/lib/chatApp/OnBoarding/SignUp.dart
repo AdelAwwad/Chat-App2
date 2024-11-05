@@ -12,7 +12,7 @@ class _SignupPageState extends State<SignupPage> {
   TextEditingController username = TextEditingController();
   TextEditingController password = TextEditingController();
   TextEditingController confirmPassword = TextEditingController();
-  TextEditingController phonenumber = TextEditingController();
+
   TextEditingController emailaddress = TextEditingController();
 
   bool _isPasswordVisible = false;
@@ -30,9 +30,9 @@ class _SignupPageState extends State<SignupPage> {
     _prefs = await SharedPreferences.getInstance();
   }
 
-  void _saveData(String phonenumber, String username, String emailaddress,
+  void _saveData(String username, String emailaddress,
       String password) async {
-    await _prefs.setString("phonenumber", phonenumber);
+
     await _prefs.setString("username", username);
     await _prefs.setString("emailaddress", emailaddress);
     await _prefs.setString("password", password);
@@ -85,10 +85,7 @@ class _SignupPageState extends State<SignupPage> {
           const SizedBox(
             height: 100,
           ),
-          _InputField("Enter your phone Number " , phonenumber),
-          const SizedBox(
-            height: 30,
-          ),
+
           _InputField("User Name ", username),
           const SizedBox(
             height: 30,
@@ -179,7 +176,7 @@ class _SignupPageState extends State<SignupPage> {
       });
 
       if (!_isPasswordMismatch) {
-        _saveData(phonenumber.text, username.text, emailaddress.text, password.text);
+        _saveData( username.text, emailaddress.text, password.text);
         // Additional sign-up logic here
       } else {
         // Show an error message
